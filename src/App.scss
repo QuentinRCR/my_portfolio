@@ -1,5 +1,10 @@
-* {
+* { //remove default margins
   margin: 0;
+}
+
+a{ //remove default a decorations
+  text-decoration: none;
+  color: inherit;
 }
 
 .App{
