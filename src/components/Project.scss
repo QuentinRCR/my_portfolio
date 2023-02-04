@@ -1,9 +1,34 @@
 .project{
-  border: solid blue;
   margin: 20px 0 20px 0;
-  width: 60%;
+
+  padding: 20px 20px 20px 20px;
+  border-radius: 10px;
+  border: solid #ddd;
+
+  max-width: 60%;
+  display: flex;
+  flex-direction: column;
 
   .videoDemonstration{
-    height: 200px;
+    margin-top: 20px;
+    height: 300px;
+    aspect-ratio: 16/9;
+    align-self: center;
+    border-radius: 10px;
   }
+
+  h4 {
+    margin: 10px 0 10px 10px;
+  }
+
+  .repositories{
+    ul{
+      li{
+        a:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
 }
