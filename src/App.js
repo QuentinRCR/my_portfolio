@@ -48,7 +48,7 @@ function App() {
             technologies: {
                 frontend:"JavaScript"
             },
-            videoURL: "https://drive.google.com/file/d/1H4_u8ao7DGZO2L2rPvkl3VUS00g7HXLJ/preview",
+            videoURL: "https://drive.google.com/file/d/1vrd1uS6NpBM1zBcdDou7RCiJq4mFOPBF/preview",
             website: "https://donut.ctc-42.org/"
         }
     ]

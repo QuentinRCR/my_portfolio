@@ -15,7 +15,7 @@ function Project({title,repositories,dates,technologies,videoURL}) {
                     </ul>
                 </h3>
             : null }
-            {repositories ? /*display the element if technologies in not null*/
+            {Object.keys(repositories).length>0 ? /*display the element if technologies in not null*/
                 <h3>Repositories:
                     <ul>
                         {Object.keys(repositories)?.map((key) => /*For each item, display the name
