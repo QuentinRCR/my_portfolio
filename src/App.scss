@@ -11,3 +11,18 @@ body{
   background-color: #444444;
   color: white;
 }
+
+.App{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .header{
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+    hr{
+      margin-top: 20px;
+    }
+  }
+}

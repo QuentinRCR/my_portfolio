@@ -54,6 +54,10 @@ function App() {
     ]
     return (
     <div className="App">
+        <header className="header">
+            <h1>My portfolio</h1>
+            <hr/>
+        </header>
         {projectInformation?.map(project => //display all the project cards
             <Project
                     key={project.title}
