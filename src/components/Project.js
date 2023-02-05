@@ -23,7 +23,7 @@ function Project({title,repositories,dates,technologies,illustration}) {
 
             {technologies ? /*display the element if technologies in not null*/
                 <div className="technologiesBox">
-                    <p >Used technologies</p>
+                    <p >Technologies used</p>
                     <div className="technologieDisplay">
                         {Object.keys(technologies)?.map((key,index) => /*For each item, display the name
                          of the key with uppercase on the first character and the name of the techno as well as the corresponding icon*/

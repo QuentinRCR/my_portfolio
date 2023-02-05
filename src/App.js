@@ -66,7 +66,7 @@ function App() {
     return (
     <div className="App">
         <header className="header">
-            <h1>My portfolio</h1>
+            <h1>My portfolio - REY Quentin</h1>
             <hr/>
         </header>
         <main>
