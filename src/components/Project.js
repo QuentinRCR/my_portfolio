@@ -7,7 +7,7 @@ function Project({title,repositories,dates,technologies,videoURL}) {
             <h2>{title}</h2>
             <h3>{dates.start} - {dates.end}</h3>
             {technologies ? /*display the element if technologies in not null*/
-                <h4>Technologie used:
+                <h4>Technologies used:
                     <ul>
                     {Object.keys(technologies)?.map((key,index) => /*For each item, display the name
                      of the key with uppercase on the first character and the name of the techno*/
