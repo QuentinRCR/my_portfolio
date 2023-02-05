@@ -23,12 +23,14 @@
     }
 
     .imageContainer{
-      height: 300px;
+      //height: 300px;
       overflow: scroll;
       border-radius: 10px;
+      aspect-ratio: 16 /16;
 
       img{
         width: 100%;
+
       }
     }
   }
