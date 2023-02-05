@@ -4,6 +4,7 @@ import JsIcon from "../images/JS-icon.png"
 import ReactIcon from "../images/React-icon.png"
 import SpringBootIcon from "../images/SpringBoot-icon.png"
 import VueIcon from "../images/Vue-icon.png"
+import GithubIcon from "../images/GithubIcon.png"
 
 
 function Project({title,repositories,dates,technologies,illustration}) {
@@ -22,7 +23,7 @@ function Project({title,repositories,dates,technologies,illustration}) {
 
             {technologies ? /*display the element if technologies in not null*/
                 <div className="technologiesBox">
-                    <p>Used technologie</p>
+                    <p >Used technologies</p>
                     <div className="technologieDisplay">
                         {Object.keys(technologies)?.map((key,index) => /*For each item, display the name
                          of the key with uppercase on the first character and the name of the techno*/
@@ -42,13 +43,19 @@ function Project({title,repositories,dates,technologies,illustration}) {
 
 
             {Object.keys(repositories).length>0 ? /*display the element if technologies in not null*/
-                <h4 className="repositories">Repositories:
-                    <ul>
-                        {Object.keys(repositories)?.map((key) => /*For each item, display the name
-                     of the key with uppercase on the first character and repositories and add the correct link*/
-                            <li key={repositories[key]}><a href={repositories[key]}>{key.charAt(0).toUpperCase() + key.slice(1)} repository</a></li>)}
-                    </ul>
-                </h4>
+                <div className="repositoriesBox">
+                    <p className="repoTitle">Repositories</p>
+                    <div className="repositoriesDisplay">
+                        {Object.keys(repositories)?.map((key) => /*For each item, display the link to the repository*/
+                            <div className="oneRepositoryBox">
+                                <a href={repositories[key]} target="_blank" rel="noreferrer">
+                                    <img src={GithubIcon} alt="Github Icon"/>
+                                </a>
+                                <p className="repoType">{key.charAt(0).toUpperCase() + key.slice(1)}</p>
+                            </div>
+                        )}
+                    </div>
+                </div>
                 : null }
 
 

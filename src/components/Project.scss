@@ -54,6 +54,34 @@
     }
   }
 
+  .repositoriesBox{
+    margin-top: 20px;
+
+    .repoTitle{
+      font-weight: bold;
+    }
+
+    .repositoriesDisplay{
+      margin-top: 5px;
+      display: flex;
+      justify-content: space-around;
+
+      .oneRepositoryBox{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img{
+          height: 3em;
+        }
+
+        p{
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
   .technologiesBox {
     margin-top: 20px;
     border: solid #555555;
