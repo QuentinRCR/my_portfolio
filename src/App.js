@@ -17,7 +17,7 @@ function App() {
             },
             technologies: {
                 frontend:"React",
-                backend:"Spring Boot"
+                backend:"SpringBoot"
             },
             illustration: {
                 image: BusSchedulesDemonstation,
@@ -37,7 +37,7 @@ function App() {
             },
             technologies: {
                 frontend:"Vue",
-                backend:"Spring Boot"
+                backend:"SpringBoot"
             },
             illustration: {
                 videoURL: "https://drive.google.com/file/d/1H4_u8ao7DGZO2L2rPvkl3VUS00g7HXLJ/preview",

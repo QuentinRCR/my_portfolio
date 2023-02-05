@@ -1,20 +1,46 @@
 import './Project.scss';
 import React from "react";
+import JsIcon from "../images/JS-icon.png"
+import ReactIcon from "../images/React-icon.png"
+import SpringBootIcon from "../images/SpringBoot-icon.png"
+import VueIcon from "../images/Vue-icon.png"
+
 
 function Project({title,repositories,dates,technologies,illustration}) {
+    const iconLibrary = {
+        React: ReactIcon,
+        Vue: VueIcon,
+        SpringBoot: SpringBootIcon,
+        JavaScript: JsIcon
+    }
     return (
     <div className="project">
             <h2>{title}</h2>
             <h3>{dates.start} - {dates.end}</h3>
+
+
+
             {technologies ? /*display the element if technologies in not null*/
-                <h4>Technologies used:
-                    <ul>
-                    {Object.keys(technologies)?.map((key,index) => /*For each item, display the name
-                     of the key with uppercase on the first character and the name of the techno*/
-                        <li key={index}>{key.charAt(0).toUpperCase() + key.slice(1)}: {technologies[key]}</li>)}
-                    </ul>
-                </h4>
+                <div className="technologiesBox">
+                    <p>Used technologie</p>
+                    <div className="technologieDisplay">
+                        {Object.keys(technologies)?.map((key,index) => /*For each item, display the name
+                         of the key with uppercase on the first character and the name of the techno*/
+                            <div className="oneTechBox">
+                                <p className="techType" key={index}>{key.charAt(0).toUpperCase() + key.slice(1)}</p>
+                                <div className="techName">
+                                    {//display the icon if it is available
+                                    iconLibrary.hasOwnProperty(technologies[key]) ? <img className="technoIcon" src={iconLibrary[technologies[key]]} alt={iconLibrary[technologies[key]]}/> : null}
+                                    <p key={index}>{technologies[key]}</p>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                </div>
             : null }
+
+
+
             {Object.keys(repositories).length>0 ? /*display the element if technologies in not null*/
                 <h4 className="repositories">Repositories:
                     <ul>
@@ -24,6 +50,9 @@ function Project({title,repositories,dates,technologies,illustration}) {
                     </ul>
                 </h4>
                 : null }
+
+
+
             <div className="illustration">
             {illustration.hasOwnProperty("videoURL") ? //if we have a video URL, we display the video
                 <iframe className="videoDemonstration" title={illustration.description} src={illustration.videoURL} allowFullScreen={true}></iframe>
