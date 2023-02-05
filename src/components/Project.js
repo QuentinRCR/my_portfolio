@@ -1,7 +1,7 @@
 import './Project.scss';
 import React from "react";
 
-function Project({title,repositories,dates,technologies,videoURL}) {
+function Project({title,repositories,dates,technologies,illustration}) {
     return (
     <div className="project">
             <h2>{title}</h2>
@@ -25,9 +25,19 @@ function Project({title,repositories,dates,technologies,videoURL}) {
                 </h4>
                 : null }
             <div className="illustration">
-            {videoURL ?
-                <iframe className="videoDemonstration" title="presentation appointment scheduler" src={videoURL} allowFullScreen={true}></iframe>
+            {illustration.hasOwnProperty("videoURL") ? //if we have a video URL, we display the video
+                <iframe className="videoDemonstration" title={illustration.description} src={illustration.videoURL} allowFullScreen={true}></iframe>
                 : null}
+
+            {illustration.hasOwnProperty("image") ? //if we have an image, we display it
+                <React.Fragment>
+                    <div className="imageContainer">
+                        <img src={illustration.image} alt={illustration.description}/>
+                    </div>
+                </React.Fragment>
+                : null
+            }
+
             </div>
 
 

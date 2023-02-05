@@ -5,23 +5,31 @@
 
   max-width: 80%;
   display: grid;
-  grid-template-columns: auto auto;
-  column-gap: 30px;
+  grid-template-columns: 350px auto;
+  column-gap: 20px;
 
   .illustration{
     grid-column: 1;
     grid-row: 1/span 4;
-    background-color: blue;
     display: flex;
     align-items: center;
     justify-content: center;
 
     .videoDemonstration{
-      height: 200px;
       aspect-ratio: 16/9;
       align-self: center;
       border-radius: 10px;
+      width: 100%;
+    }
 
+    .imageContainer{
+      height: 300px;
+      overflow: scroll;
+      border-radius: 10px;
+
+      img{
+        width: 100%;
+      }
     }
   }
 

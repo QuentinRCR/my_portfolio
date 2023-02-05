@@ -1,6 +1,7 @@
 import './App.scss';
 import Project from './components/Project'
 import React from "react";
+import BusSchedulesDemonstation from './images/bus schedules demonstation.png'
 
 function App() {
     let projectInformation = [
@@ -18,7 +19,10 @@ function App() {
                 frontend:"React",
                 backend:"Spring Boot"
             },
-            videoURL: null,
+            illustration: {
+                image: BusSchedulesDemonstation,
+                description: "Demonstration of a display of bus schedules"
+            },
             website: null
         },
         {
@@ -35,7 +39,10 @@ function App() {
                 frontend:"Vue",
                 backend:"Spring Boot"
             },
-            videoURL: "https://drive.google.com/file/d/1H4_u8ao7DGZO2L2rPvkl3VUS00g7HXLJ/preview",
+            illustration: {
+                videoURL: "https://drive.google.com/file/d/1H4_u8ao7DGZO2L2rPvkl3VUS00g7HXLJ/preview",
+                description: "Presentation appointment scheduler"
+            },
             website: null
         },
         {
@@ -49,7 +56,10 @@ function App() {
             technologies: {
                 frontend:"JavaScript"
             },
-            videoURL: "https://drive.google.com/file/d/1vrd1uS6NpBM1zBcdDou7RCiJq4mFOPBF/preview",
+            illustration: {
+                videoURL: "https://drive.google.com/file/d/1vrd1uS6NpBM1zBcdDou7RCiJq4mFOPBF/preview",
+                description: "Presentation interface on the ecological situation of Saint-Etienne"
+            },
             website: "https://donut.ctc-42.org/"
         }
     ]
@@ -63,12 +73,12 @@ function App() {
             {projectInformation?.map(project => //display all the project cards
                 <React.Fragment>
                     <Project
-                            key={project.title}
-                            title={project.title}
-                            repositories={project.repositoriesURL}
-                             dates={project.dates}
-                             technologies={project.technologies}
-                             videoURL={project.videoURL}
+                        key={project.title}
+                        title={project.title}
+                        repositories={project.repositoriesURL}
+                        dates={project.dates}
+                        technologies={project.technologies}
+                        illustration={project.illustration}
                     ></Project>
                     <hr/>
                 </React.Fragment>
