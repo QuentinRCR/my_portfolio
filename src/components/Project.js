@@ -26,8 +26,8 @@ function Project({title,repositories,dates,technologies,illustration}) {
                     <p >Used technologies</p>
                     <div className="technologieDisplay">
                         {Object.keys(technologies)?.map((key,index) => /*For each item, display the name
-                         of the key with uppercase on the first character and the name of the techno*/
-                            <div className="oneTechBox">
+                         of the key with uppercase on the first character and the name of the techno as well as the corresponding icon*/
+                            <div key={index} className="oneTechBox">
                                 <p className="techType" key={index}>{key.charAt(0).toUpperCase() + key.slice(1)}</p>
                                 <div className="techName">
                                     {//display the icon if it is available
