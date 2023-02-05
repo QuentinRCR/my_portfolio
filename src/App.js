@@ -16,8 +16,8 @@ function App() {
                 end: "Today"
             },
             technologies: {
-                frontend:"React",
-                backend:"SpringBoot"
+                backend:"SpringBoot",
+                frontend:"React"
             },
             illustration: {
                 image: BusSchedulesDemonstation,
@@ -36,8 +36,8 @@ function App() {
                 end: "January 2023"
             },
             technologies: {
-                frontend:"Vue",
-                backend:"SpringBoot"
+                backend:"SpringBoot",
+                frontend:"Vue"
             },
             illustration: {
                 videoURL: "https://drive.google.com/file/d/1H4_u8ao7DGZO2L2rPvkl3VUS00g7HXLJ/preview",

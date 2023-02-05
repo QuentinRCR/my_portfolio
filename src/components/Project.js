@@ -61,19 +61,18 @@ function Project({title,repositories,dates,technologies,illustration}) {
 
 
             <div className="illustration">
-            {illustration.hasOwnProperty("videoURL") ? //if we have a video URL, we display the video
-                <iframe className="videoDemonstration" title={illustration.description} src={illustration.videoURL} allowFullScreen={true}></iframe>
-                : null}
+                {illustration.hasOwnProperty("videoURL") ? //if we have a video URL, we display the video
+                    <iframe className="videoDemonstration" title={illustration.description} src={illustration.videoURL} allowFullScreen={true}></iframe>
+                    : null}
 
-            {illustration.hasOwnProperty("image") ? //if we have an image, we display it
-                <React.Fragment>
-                    <div className="imageContainer">
-                        <img src={illustration.image} alt={illustration.description}/>
-                    </div>
-                </React.Fragment>
-                : null
-            }
-
+                {illustration.hasOwnProperty("image") ? //if we have an image, we display it
+                    <React.Fragment>
+                        <div className="imageContainer">
+                            <img src={illustration.image} alt={illustration.description}/>
+                        </div>
+                    </React.Fragment>
+                    : null
+                }
             </div>
 
 

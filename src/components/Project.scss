@@ -1,12 +1,11 @@
 .project{
-  padding: 20px 20px 20px 20px;
   border-radius: 10px;
   //border: solid #ddd;
 
   max-width: 80%;
   display: grid;
-  grid-template-columns: 350px auto;
-  column-gap: 20px;
+  grid-template-columns: 35% 1fr;
+  column-gap: 40px;
 
   .illustration{
     grid-column: 1;
@@ -14,19 +13,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
 
     .videoDemonstration{
-      aspect-ratio: 16/9;
+      //aspect-ratio: 16/9;
       align-self: center;
       border-radius: 10px;
       width: 100%;
+      aspect-ratio: 16/9;
     }
 
     .imageContainer{
-      //height: 300px;
       overflow: scroll;
       border-radius: 10px;
-      aspect-ratio: 16 /16;
+      width: 100%;
+      aspect-ratio: 1;
 
       img{
         width: 100%;
@@ -35,24 +36,6 @@
     }
   }
 
-
-  h4 {
-    margin: 10px 0 10px 10px;
-  }
-
-  h2{
-
-  }
-
-  .repositories{
-    ul{
-      li{
-        a:hover{
-          text-decoration: underline;
-        }
-      }
-    }
-  }
 
   .repositoriesBox{
     margin-top: 20px;
