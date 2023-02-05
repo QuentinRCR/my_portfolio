@@ -8,8 +8,8 @@ a{ //remove default a decorations
 }
 
 body{
-  background-color: #444444;
-  color: white;
+  background-color: #eeeeee;
+  color: #111111;
 }
 
 .App{
@@ -23,6 +23,17 @@ body{
 
     hr{
       margin-top: 20px;
+    }
+  }
+
+  main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    hr{
+      width: 80%;
+      margin: 50px 0 50px 0;
     }
   }
 }

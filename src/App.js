@@ -1,5 +1,6 @@
 import './App.scss';
 import Project from './components/Project'
+import React from "react";
 
 function App() {
     let projectInformation = [
@@ -58,16 +59,21 @@ function App() {
             <h1>My portfolio</h1>
             <hr/>
         </header>
-        {projectInformation?.map(project => //display all the project cards
-            <Project
-                    key={project.title}
-                    title={project.title}
-                    repositories={project.repositoriesURL}
-                     dates={project.dates}
-                     technologies={project.technologies}
-                     videoURL={project.videoURL}
-            ></Project>
-        )}
+        <main>
+            {projectInformation?.map(project => //display all the project cards
+                <React.Fragment>
+                    <Project
+                            key={project.title}
+                            title={project.title}
+                            repositories={project.repositoriesURL}
+                             dates={project.dates}
+                             technologies={project.technologies}
+                             videoURL={project.videoURL}
+                    ></Project>
+                    <hr/>
+                </React.Fragment>
+            )}
+        </main>
     </div>
     );
 }

@@ -24,9 +24,11 @@ function Project({title,repositories,dates,technologies,videoURL}) {
                     </ul>
                 </h4>
                 : null }
+            <div className="illustration">
             {videoURL ?
                 <iframe className="videoDemonstration" title="presentation appointment scheduler" src={videoURL} allowFullScreen={true}></iframe>
                 : null}
+            </div>
 
 
         </div>
