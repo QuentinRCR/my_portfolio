@@ -16,7 +16,8 @@ function App() {
                 end: "Today"
             },
             technologies: {
-                frontend:"React"
+                frontend:"React",
+                css: "Sass"
             },
             illustration: {
                 image: PortfolioImage,
@@ -27,7 +28,7 @@ function App() {
             title: "Personal project - Consultation of bus schedules",
             repositoriesURL: {
                 backend: "https://github.com/QuentinRCR/backend-shuttle-time-display",
-                frontend: "https://github.com/QuentinRCR/shuttle-time-display",
+                frontend: "https://github.com/QuentinRCR/shuttle-time-display"
             },
             dates: {
                 start: "January 2023",
@@ -35,7 +36,8 @@ function App() {
             },
             technologies: {
                 backend:"SpringBoot",
-                frontend:"React"
+                frontend:"React",
+                css: "Sass"
             },
             illustration: {
                 image: BusSchedulesDemonstation,
@@ -55,7 +57,8 @@ function App() {
             },
             technologies: {
                 backend:"SpringBoot",
-                frontend:"Vue"
+                frontend:"Vue",
+                css: "Sass"
             },
             illustration: {
                 videoURL: "https://drive.google.com/file/d/1H4_u8ao7DGZO2L2rPvkl3VUS00g7HXLJ/preview",

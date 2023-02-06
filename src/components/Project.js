@@ -5,6 +5,7 @@ import ReactIcon from "../images/React-icon.png"
 import SpringBootIcon from "../images/SpringBoot-icon.png"
 import VueIcon from "../images/Vue-icon.png"
 import GithubIcon from "../images/GithubIcon.png"
+import SassIcon from "../images/SassIcon.png"
 
 
 function Project({title,repositories,dates,technologies,illustration}) {
@@ -12,7 +13,8 @@ function Project({title,repositories,dates,technologies,illustration}) {
         React: ReactIcon,
         Vue: VueIcon,
         SpringBoot: SpringBootIcon,
-        JavaScript: JsIcon
+        JavaScript: JsIcon,
+        Sass: SassIcon
     }
     return (
     <div className="project">
