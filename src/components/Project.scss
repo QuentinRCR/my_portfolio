@@ -1,11 +1,9 @@
 .project{
   border-radius: 10px;
-  //border: solid #ddd;
-
-  max-width: 80%;
   display: grid;
   grid-template-columns: 35% 1fr;
   column-gap: 40px;
+  width: 80%;
 
   .illustration{
     grid-column: 1;

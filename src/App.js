@@ -2,9 +2,27 @@ import './App.scss';
 import Project from './components/Project'
 import React from "react";
 import BusSchedulesDemonstation from './images/bus schedules demonstation.png'
+import PortfolioImage from './images/portfolio.png'
 
 function App() {
     let projectInformation = [
+        {
+            title: "This web portfolio",
+            repositoriesURL: {
+                frontend: "https://github.com/QuentinRCR/my_portfolio"
+            },
+            dates: {
+                start: "February 2023",
+                end: "Today"
+            },
+            technologies: {
+                frontend:"React"
+            },
+            illustration: {
+                image: PortfolioImage,
+                description: "Image of a portfolio"
+            },
+        },
         {
             title: "Personal project - Consultation of bus schedules",
             repositoriesURL: {
