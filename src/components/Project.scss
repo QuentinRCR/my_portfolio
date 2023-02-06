@@ -1,8 +1,19 @@
+@media screen and (min-width: 580px) {
+  .project{
+
+    grid-template-columns: 35% 1fr;
+    column-gap: 40px;
+  }
+
+  .illustration{
+    margin: 0 !important;
+  }
+}
+
+
 .project{
   border-radius: 10px;
   display: grid;
-  grid-template-columns: 35% 1fr;
-  column-gap: 40px;
   width: 80%;
 
   .illustration{
@@ -12,6 +23,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    margin-bottom: 20px; //for the mobile display
 
     .videoDemonstration{
       //aspect-ratio: 16/9;
