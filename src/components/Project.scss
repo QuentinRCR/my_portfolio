@@ -47,18 +47,33 @@
       display: flex;
       justify-content: space-around;
 
+
+
       .oneRepositoryBox{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
 
-        img{
-          height: 3em;
+        a{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 5px;
+          border-radius: 5px;
+          border: solid #eeeeee;
+
+          &:hover{
+            background-color: white;
+            border: solid #666666;
+          }
+
+
+          img{
+            height: 3em;
+          }
+
+          p{
+            font-weight: bold;
+          }
         }
 
-        p{
-          font-weight: bold;
-        }
       }
     }
   }

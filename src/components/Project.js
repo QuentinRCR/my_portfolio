@@ -50,8 +50,8 @@ function Project({title,repositories,dates,technologies,illustration}) {
                             <div className="oneRepositoryBox">
                                 <a href={repositories[key]} target="_blank" rel="noreferrer">
                                     <img src={GithubIcon} alt="Github Icon"/>
+                                    <p className="repoType">{key.charAt(0).toUpperCase() + key.slice(1)}</p>
                                 </a>
-                                <p className="repoType">{key.charAt(0).toUpperCase() + key.slice(1)}</p>
                             </div>
                         )}
                     </div>
