@@ -8,7 +8,7 @@ import GithubIcon from "../images/GithubIcon.png"
 import SassIcon from "../images/SassIcon.png"
 
 
-function Project({title,repositories,dates,technologies,illustration}) {
+function Project({title,repositories,dates,technologies,illustration,websiteURL}) {
     const iconLibrary = {
         React: ReactIcon,
         Vue: VueIcon,
@@ -80,7 +80,9 @@ function Project({title,repositories,dates,technologies,illustration}) {
 
 
 
-
+            {websiteURL ? /*display the element if technologies in not null*/
+                <a className="accessWebsite" href={websiteURL} target="_blank" rel="noreferrer">Access the website</a>
+            : null }
 
 
         </div>

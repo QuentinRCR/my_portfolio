@@ -141,12 +141,26 @@
             margin-bottom: 2px;
           }
         }
-
-
       }
-
     }
+  }
 
+  .accessWebsite{
+    background-color: white;
+    border: solid 7px #666666;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 40px 5px 5px 5px; //to compensate the padding on over
+    justify-self: center;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.2s ease-in-out;
+
+    &:hover{
+      border: solid 7px #555555;
+      margin: 35px 0 0 0; //35 = 40-5 to take the extra padding into account
+      padding: 15px;
+    }
   }
 
 }

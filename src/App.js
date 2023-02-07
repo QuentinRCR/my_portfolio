@@ -43,7 +43,7 @@ function App() {
                 image: BusSchedulesDemonstation,
                 description: "Demonstration of a display of bus schedules"
             },
-            website: null
+            websiteURL: null
         },
         {
             title: "Appointment scheduler for the school’s psychologist",
@@ -64,7 +64,7 @@ function App() {
                 videoURL: "https://drive.google.com/file/d/1H4_u8ao7DGZO2L2rPvkl3VUS00g7HXLJ/preview",
                 description: "Presentation appointment scheduler"
             },
-            website: null
+            websiteURL: null
         },
         {
             title: "Web interface to display the data of the ecological situation of Saint-Etienne",
@@ -81,7 +81,7 @@ function App() {
                 videoURL: "https://drive.google.com/file/d/1vrd1uS6NpBM1zBcdDou7RCiJq4mFOPBF/preview",
                 description: "Presentation interface on the ecological situation of Saint-Etienne"
             },
-            website: "https://donut.ctc-42.org/"
+            websiteURL: "https://donut.ctc-42.org/"
         }
     ]
     return (
@@ -100,6 +100,7 @@ function App() {
                         dates={project.dates}
                         technologies={project.technologies}
                         illustration={project.illustration}
+                        websiteURL={project.websiteURL}
                     ></Project>
                     <hr/>
                 </React.Fragment>
