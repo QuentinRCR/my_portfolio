@@ -18,6 +18,11 @@ function Project({title,repositories,dates,technologies,illustration}) {
     }
     return (
     <div className="project">
+            <h2>{title}</h2>
+            <h3>{dates.start} - {dates.end}</h3>
+
+
+
             <div className="illustration">
                 {illustration.hasOwnProperty("videoURL") ? //if we have a video URL, we display the video
                     <iframe className="videoDemonstration" title={illustration.description} src={illustration.videoURL} allowFullScreen={true}></iframe>
@@ -33,11 +38,6 @@ function Project({title,repositories,dates,technologies,illustration}) {
                 }
             </div>
 
-
-
-
-            <h2>{title}</h2>
-            <h3>{dates.start} - {dates.end}</h3>
 
 
 

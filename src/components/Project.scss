@@ -7,6 +7,7 @@
 
   .illustration{
     margin: 0 !important;
+    grid-row: 1/span 10;
   }
 }
 
@@ -18,12 +19,11 @@
 
   .illustration{
     grid-column: 1;
-    grid-row: 1/span 10;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin-bottom: 20px; //for the mobile display
+    margin-top: 20px; //for the mobile display
 
     .videoDemonstration{
       //aspect-ratio: 16/9;
