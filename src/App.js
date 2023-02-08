@@ -101,6 +101,7 @@ function App() {
                         technologies={project.technologies}
                         illustration={project.illustration}
                         websiteURL={project.websiteURL}
+                        className="project"
                     ></Project>
                     <hr/>
                 </React.Fragment>
