@@ -104,8 +104,8 @@ function Project({title,repositories,dates,technologies,illustration,websiteURL}
                 <div className="repositoriesBox">
                     <p className="repoTitle">Repositories</p>
                     <div className="repositoriesDisplay">
-                        {Object.keys(repositories)?.map((key) => /*For each item, display the link to the repository*/
-                            <div className="oneRepositoryBox">
+                        {Object.keys(repositories)?.map((key,index) => /*For each item, display the link to the repository*/
+                            <div key={index} className="oneRepositoryBox">
                                 <a href={repositories[key]} target="_blank" rel="noreferrer">
                                     <img src={GithubIcon} alt="Github Icon"/>
                                     <p className="repoType">{key.charAt(0).toUpperCase() + key.slice(1)}</p>

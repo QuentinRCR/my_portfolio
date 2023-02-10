@@ -91,10 +91,9 @@ function App() {
             <hr/>
         </header>
         <main>
-            {projectInformation?.map(project => //display all the project cards
-                <React.Fragment>
+            {projectInformation?.map((project) => //display all the project cards
+                <React.Fragment key={project.title}>
                     <Project
-                        key={project.title}
                         title={project.title}
                         repositories={project.repositoriesURL}
                         dates={project.dates}
