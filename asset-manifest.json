@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/my_portfolio/static/css/main.b6d27c8c.css",
-    "main.js": "/my_portfolio/static/js/main.a073e14e.js",
+    "main.css": "/my_portfolio/static/css/main.0c029332.css",
+    "main.js": "/my_portfolio/static/js/main.6498684a.js",
     "static/js/787.128fc6e9.chunk.js": "/my_portfolio/static/js/787.128fc6e9.chunk.js",
+    "static/media/portfolio.png": "/my_portfolio/static/media/portfolio.d016e95b7416bc90584e.png",
     "static/media/SassIcon.png": "/my_portfolio/static/media/SassIcon.7cdbf6b5889c42b3e490.png",
     "static/media/bus schedules demonstation.png": "/my_portfolio/static/media/bus schedules demonstation.f0a04f1ad301ecc360b6.png",
     "static/media/React-icon.png": "/my_portfolio/static/media/React-icon.09df55c21bdb35711dd0.png",
-    "static/media/portfolio.png": "/my_portfolio/static/media/portfolio.c3dc963249a9c1cb1e84.png",
     "static/media/JS-icon.png": "/my_portfolio/static/media/JS-icon.3dfb665e058d08c99f28.png",
     "static/media/SpringBoot-icon.png": "/my_portfolio/static/media/SpringBoot-icon.03f4d4b3ca05a6314f9f.png",
     "index.html": "/my_portfolio/index.html",
-    "main.b6d27c8c.css.map": "/my_portfolio/static/css/main.b6d27c8c.css.map",
-    "main.a073e14e.js.map": "/my_portfolio/static/js/main.a073e14e.js.map",
+    "main.0c029332.css.map": "/my_portfolio/static/css/main.0c029332.css.map",
+    "main.6498684a.js.map": "/my_portfolio/static/js/main.6498684a.js.map",
     "787.128fc6e9.chunk.js.map": "/my_portfolio/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b6d27c8c.css",
-    "static/js/main.a073e14e.js"
+    "static/css/main.0c029332.css",
+    "static/js/main.6498684a.js"
   ]
 }
