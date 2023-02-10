@@ -1,5 +1,5 @@
 import './Project.scss';
-import React from "react";
+import React, {useEffect, useState, useRef, useCallback} from "react";
 import JsIcon from "../images/JS-icon.png"
 import ReactIcon from "../images/React-icon.png"
 import SpringBootIcon from "../images/SpringBoot-icon.png"
@@ -16,8 +16,46 @@ function Project({title,repositories,dates,technologies,illustration,websiteURL}
         JavaScript: JsIcon,
         Sass: SassIcon
     }
+    const divRef = useRef();
+
+    const [isVisible, setIsVisible] = useState(true);
+    const [topComponent, setTopComponent]= useState(0)
+    const [bottomComponent,setBottomComponent] = useState(0);
+    const [componentHeight, setComponentHeight] = useState(0);
+
+
+
+
+    useEffect(() => { //add on mount and remove on dismount event listener on scroll
+        window.addEventListener("scroll", listenToScroll);
+        return () =>
+            window.removeEventListener("scroll", listenToScroll);
+    })
+
+    //manage the activation and deactivation of the elements based on the scroll
+    const listenToScroll = useCallback (() => {
+        const screenHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+        const bottomScroll = (document.body.scrollTop|| //use too different ways to support several browsers
+            document.documentElement.scrollTop) +screenHeight - componentHeight*0.2 ;
+        const topScroll = (document.body.scrollTop||
+            document.documentElement.scrollTop) +componentHeight*0.2;
+        if ((bottomScroll > topComponent) && (topScroll< bottomComponent)) { //if the top of the element just entered the screen
+            setIsVisible(true);                                         //and its bottom is bellow the top of the screen
+        } else {                                                             //it is displayed
+            isVisible && setIsVisible(false); //if it was visible, then make it not visible
+        }
+    }, [componentHeight, topComponent, bottomComponent, isVisible]);
+
+    useEffect( () => { //set the valued of the size of the components at first render
+        setComponentHeight(divRef.current.offsetHeight)
+        setTopComponent(divRef.current.offsetTop )//+ divRef.current.offsetHeight)
+        setBottomComponent(divRef.current.offsetTop + divRef.current.offsetHeight)
+        listenToScroll()
+    },[componentHeight,listenToScroll])
     return (
-    <div className="project">
+
+    <div className={isVisible ? "project activated" : "project deactivated"} ref={divRef}>
+
             <h2>{title}</h2>
             <h3>{dates.start} - {dates.end}</h3>
 
@@ -84,9 +122,7 @@ function Project({title,repositories,dates,technologies,illustration,websiteURL}
                 <a className="accessWebsite" href={websiteURL} target="_blank" rel="noreferrer">Access the website</a>
             : null }
 
-
         </div>
-
     );
 }
 

@@ -107,6 +107,9 @@ function App() {
                 </React.Fragment>
             )}
         </main>
+        <footer> {/*used to avoid bug in the mobile version*/}
+
+        </footer>
     </div>
     );
 }

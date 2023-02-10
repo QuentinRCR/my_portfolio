@@ -23,6 +23,48 @@
   }
 }
 
+@keyframes slideAndAppearFromLeft {
+  0%{
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+
+  50%{
+    opacity: 40%;
+  }
+
+  100%{
+    transform: translateX(0%);
+    opacity: 100%;
+  }
+}
+
+@keyframes slideAndDisappearToRight {
+  0%{
+    transform: translateX(0);
+    opacity: 100%;
+  }
+
+  50%{
+    opacity: 60%;
+  }
+
+  100%{
+    transform: translateX(50%);
+    opacity: 0;
+  }
+}
+
+.deactivated{
+  animation: slideAndDisappearToRight 0.5s;
+  opacity: 0;
+}
+
+.activated{
+  animation: slideAndAppearFromLeft 0.5s;
+  opacity: 100%;
+}
+
 
 .project{
   border-radius: 10px;
