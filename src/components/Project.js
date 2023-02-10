@@ -63,7 +63,12 @@ function Project({title,repositories,dates,technologies,illustration,websiteURL}
 
             <div className="illustration">
                 {illustration.hasOwnProperty("videoURL") ? //if we have a video URL, we display the video
-                    <iframe className="videoDemonstration" title={illustration.description} src={illustration.videoURL} allowFullScreen={true}></iframe>
+                    <iframe
+                        className="videoDemonstration"
+                        title={illustration.description}
+                        src={illustration.videoURL}
+                        allowFullScreen={true}
+                    ></iframe>
                     : null}
 
                 {illustration.hasOwnProperty("image") ? //if we have an image, we display it
