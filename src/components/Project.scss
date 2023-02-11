@@ -91,19 +91,22 @@
       overflow: hidden;
       border-radius: 10px;
       width: 100%;
-      aspect-ratio: 1;
-      cursor: pointer;
-
 
       img{
         width: 100%;
-
       }
+    }
+
+    .croppedImage{
+      mask-image: linear-gradient(rgba(0, 0, 0, 1.0) 85%, transparent 100%); //add the gradiant to show that is image is clickable
+      cursor: pointer;
+      aspect-ratio: 1;
     }
 
     .fullImage{ //to unable the full image to display
       aspect-ratio: auto;
       cursor: pointer;
+
     }
   }
 

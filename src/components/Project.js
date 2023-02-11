@@ -76,7 +76,7 @@ function Project({title,repositories,dates,technologies,illustration,websiteURL}
 
                 {illustration.hasOwnProperty("image") ? //if we have an image, we display it
                     <React.Fragment>
-                        <div className={isIllustrationClicked ? "imageContainer fullImage":"imageContainer"} onClick={handleClick}>
+                        <div className={isIllustrationClicked ? "imageContainer fullImage":"imageContainer croppedImage"} onClick={handleClick}>
                             <img src={illustration.image} alt={illustration.description}/>
                         </div>
                     </React.Fragment>
