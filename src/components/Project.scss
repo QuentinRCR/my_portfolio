@@ -88,15 +88,22 @@
     }
 
     .imageContainer{
-      overflow: scroll;
+      overflow: hidden;
       border-radius: 10px;
       width: 100%;
       aspect-ratio: 1;
+      cursor: pointer;
+
 
       img{
         width: 100%;
 
       }
+    }
+
+    .fullImage{ //to unable the full image to display
+      aspect-ratio: auto;
+      cursor: pointer;
     }
   }
 

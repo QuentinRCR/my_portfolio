@@ -17,13 +17,10 @@ function Project({title,repositories,dates,technologies,illustration,websiteURL}
         Sass: SassIcon
     }
     const divRef = useRef();
-
     const [isVisible, setIsVisible] = useState(true);
     const [topComponent, setTopComponent]= useState(0)
     const [bottomComponent,setBottomComponent] = useState(0);
     const [componentHeight, setComponentHeight] = useState(0);
-
-
 
 
     useEffect(() => { //add on mount and remove on dismount event listener on scroll
@@ -52,6 +49,12 @@ function Project({title,repositories,dates,technologies,illustration,websiteURL}
         setBottomComponent(divRef.current.offsetTop + divRef.current.offsetHeight)
         listenToScroll()
     },[componentHeight,listenToScroll])
+
+    const [isIllustrationClicked, setIsIllustrationClicked] = useState(false);
+
+    const handleClick = () => { //toggle isIllustrationClicked variable
+        setIsIllustrationClicked(current => !current);
+    };
     return (
 
     <div className={isVisible ? "project activated" : "project deactivated"} ref={divRef}>
@@ -73,7 +76,7 @@ function Project({title,repositories,dates,technologies,illustration,websiteURL}
 
                 {illustration.hasOwnProperty("image") ? //if we have an image, we display it
                     <React.Fragment>
-                        <div className="imageContainer">
+                        <div className={isIllustrationClicked ? "imageContainer fullImage":"imageContainer"} onClick={handleClick}>
                             <img src={illustration.image} alt={illustration.description}/>
                         </div>
                     </React.Fragment>
