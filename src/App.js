@@ -107,7 +107,6 @@ function App() {
             )}
         </main>
         <footer> {/*used to avoid bug in the mobile version*/}
-
         </footer>
     </div>
     );

@@ -124,8 +124,10 @@ function Project({title,repositories,dates,technologies,illustration,websiteURL}
 
 
             {websiteURL ? /*display the element if technologies in not null*/
-                <a className="accessWebsite" href={websiteURL} target="_blank" rel="noreferrer">Access the website</a>
-            : null }
+                <div className="accessWebsite">
+                    <a className="prettyButton" href={websiteURL} target="_blank" rel="noreferrer">Access the website</a>
+                </div>
+                    : null }
 
         </div>
     );
