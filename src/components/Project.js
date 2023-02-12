@@ -21,6 +21,8 @@ function Project({title,repositories,dates,technologies,illustration,websiteURL}
     const [topComponent, setTopComponent]= useState(0)
     const [bottomComponent,setBottomComponent] = useState(0);
     const [componentHeight, setComponentHeight] = useState(0);
+    const [imageHeight,setImageHeight]=useState(0);
+    const [imageWidth,setImageWidth]=useState(0);
 
 
     useEffect(() => { //add on mount and remove on dismount event listener on scroll
@@ -47,8 +49,12 @@ function Project({title,repositories,dates,technologies,illustration,websiteURL}
         setComponentHeight(divRef.current.offsetHeight)
         setTopComponent(divRef.current.offsetTop )//+ divRef.current.offsetHeight)
         setBottomComponent(divRef.current.offsetTop + divRef.current.offsetHeight)
+        const img = new Image();
+        img.src = illustration.image;
+        setImageHeight(img.height)
+        setImageWidth(img.width)
         listenToScroll()
-    },[componentHeight,listenToScroll])
+    },[componentHeight,listenToScroll,illustration.image])
 
     const [isIllustrationClicked, setIsIllustrationClicked] = useState(false);
 
@@ -76,8 +82,19 @@ function Project({title,repositories,dates,technologies,illustration,websiteURL}
 
                 {illustration.hasOwnProperty("image") ? //if we have an image, we display it
                     <React.Fragment>
-                        <div className={isIllustrationClicked ? "imageContainer fullImage":"imageContainer croppedImage"} onClick={handleClick}>
-                            <img src={illustration.image} alt={illustration.description}/>
+                        <div
+                            className={isIllustrationClicked ? "imageContainer fullImage":"imageContainer croppedImage"}
+                            onClick={handleClick}
+                            style={isIllustrationClicked ? {
+                                backgroundImage: `url(${illustration.image})`,
+                                minHeight: document.getElementsByClassName("imageContainer").item(0).clientWidth*imageHeight/imageWidth
+                            }:
+                            {
+                                backgroundImage: `url(${illustration.image})`
+                            }
+                        }>
+
+                            {/*<img src={illustration.image} alt={illustration.description}/>*/}
                         </div>
                     </React.Fragment>
                     : null

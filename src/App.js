@@ -1,7 +1,7 @@
 import './App.scss';
 import Project from './components/Project'
 import React from "react";
-import BusSchedulesDemonstation from './images/bus schedules demonstation.png'
+import BusSchedulesDemonstation from './images/bus_schedules_demonstation.png'
 import PortfolioImage from './images/portfolio.png'
 
 function App() {
