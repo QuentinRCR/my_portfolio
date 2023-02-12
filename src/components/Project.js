@@ -21,8 +21,7 @@ function Project({title,repositories,dates,technologies,illustration,websiteURL}
     const [topComponent, setTopComponent]= useState(0)
     const [bottomComponent,setBottomComponent] = useState(0);
     const [componentHeight, setComponentHeight] = useState(0);
-    const [imageHeight,setImageHeight]=useState(0);
-    const [imageWidth,setImageWidth]=useState(0);
+    const [aspectRatio,setAspectRatio]=useState(0);
 
 
     useEffect(() => { //add on mount and remove on dismount event listener on scroll
@@ -51,8 +50,7 @@ function Project({title,repositories,dates,technologies,illustration,websiteURL}
         setBottomComponent(divRef.current.offsetTop + divRef.current.offsetHeight)
         const img = new Image();
         img.src = illustration.image;
-        setImageHeight(img.height)
-        setImageWidth(img.width)
+        setAspectRatio(img.height/img.width)
         listenToScroll()
     },[componentHeight,listenToScroll,illustration.image])
 
@@ -84,17 +82,15 @@ function Project({title,repositories,dates,technologies,illustration,websiteURL}
                     <React.Fragment>
                         <div
                             className={isIllustrationClicked ? "imageContainer fullImage":"imageContainer croppedImage"}
-                            onClick={handleClick}
+                            onClick={handleClick} //increase the size of the box to display full image
                             style={isIllustrationClicked ? {
-                                backgroundImage: `url(${illustration.image})`,
-                                minHeight: document.getElementsByClassName("imageContainer").item(0).clientWidth*imageHeight/imageWidth
+                                backgroundImage: `url(${illustration.image})`, //use a background because it doesn't increase the height
+                                height: document.getElementsByClassName("imageContainer").item(0).clientWidth*aspectRatio*1.01 //width of the container time the aspect ratio * 1% because of calculation errors
                             }:
                             {
                                 backgroundImage: `url(${illustration.image})`
                             }
                         }>
-
-                            {/*<img src={illustration.image} alt={illustration.description}/>*/}
                         </div>
                     </React.Fragment>
                     : null
