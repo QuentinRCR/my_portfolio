@@ -83,7 +83,7 @@ function App() {
             },
             websiteURL: "https://donut.ctc-42.org/"
         }
-    ]
+    ];
     return (
     <div className="App">
         <header className="header">
@@ -91,7 +91,7 @@ function App() {
             <hr/>
         </header>
         <main>
-            {projectInformation?.map((project) => //display all the project cards
+            {projectInformation?.map((project,index) => //display all the project cards
                 <React.Fragment key={project.title}>
                     <Project
                         title={project.title}
@@ -100,6 +100,7 @@ function App() {
                         technologies={project.technologies}
                         illustration={project.illustration}
                         websiteURL={project.websiteURL}
+                        index={index}
                         className="project"
                     ></Project>
                     <hr/>

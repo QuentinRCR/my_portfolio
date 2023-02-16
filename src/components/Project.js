@@ -8,7 +8,7 @@ import GithubIcon from "../images/GithubIcon.png"
 import SassIcon from "../images/SassIcon.png"
 
 
-function Project({title,repositories,dates,technologies,illustration,websiteURL}) {
+function Project({title,repositories,dates,technologies,illustration,websiteURL,index}) {
     const iconLibrary = {
         React: ReactIcon,
         Vue: VueIcon,
@@ -16,7 +16,7 @@ function Project({title,repositories,dates,technologies,illustration,websiteURL}
         JavaScript: JsIcon,
         Sass: SassIcon
     }
-    const divRef = useRef();
+    const entireComponent = useRef();
     const [isVisible, setIsVisible] = useState(true);
     const [topComponent, setTopComponent]= useState(0)
     const [bottomComponent,setBottomComponent] = useState(0);
@@ -24,6 +24,7 @@ function Project({title,repositories,dates,technologies,illustration,websiteURL}
     const [aspectRatio,setAspectRatio]=useState(0);
 
 
+    //=====this part handle the appearance and disappearance of elements when it enters the screen ===
     useEffect(() => { //add on mount and remove on dismount event listener on scroll
         window.addEventListener("scroll", listenToScroll);
         return () =>
@@ -45,23 +46,50 @@ function Project({title,repositories,dates,technologies,illustration,websiteURL}
     }, [componentHeight, topComponent, bottomComponent, isVisible]);
 
     useEffect( () => { //set the valued of the size of the components at first render
-        setComponentHeight(divRef.current.offsetHeight)
-        setTopComponent(divRef.current.offsetTop )//+ divRef.current.offsetHeight)
-        setBottomComponent(divRef.current.offsetTop + divRef.current.offsetHeight)
+        setComponentHeight(entireComponent.current.offsetHeight)
+        setTopComponent(entireComponent.current.offsetTop )//+ entireComponent.current.offsetHeight)
+        setBottomComponent(entireComponent.current.offsetTop + entireComponent.current.offsetHeight)
         const img = new Image();
         img.src = illustration.image;
         setAspectRatio(img.height/img.width)
         listenToScroll()
     },[componentHeight,listenToScroll,illustration.image])
 
-    const [isIllustrationClicked, setIsIllustrationClicked] = useState(false);
+    const [isImageClicked, setIsImageClicked] = useState(false);
+    const [isVideoClicked, setIsVideoClicked] = useState(false);
 
-    const handleClick = () => { //toggle isIllustrationClicked variable
-        setIsIllustrationClicked(current => !current);
+    const handleClickImage = () => { //toggle isImageClicked variable
+        setIsImageClicked(current => !current);
     };
+
+    const handleClickVideo =useCallback (() => { //toggle isImageClicked variable
+        setIsVideoClicked(current => !current);
+        console.log(" toggle video")
+    },[]);
+
+    useEffect(() => {
+        console.log(index+" useEffect triggered ")
+        if(isVideoClicked) {
+            document.addEventListener('click', bodyClicked);
+            console.log(index+" add listener");
+        }
+        return () => {
+            document.removeEventListener('click', bodyClicked);
+            console.log(index+" remove listener");
+        };
+
+        function bodyClicked(e){
+            if(e.target.className !== "clickDetection") {
+                if (isVideoClicked) {
+                    handleClickVideo();
+                    console.log(index + " body clicked");
+                }
+            }
+        }
+    }, [isVideoClicked,index,handleClickVideo]);
     return (
 
-    <div className={isVisible ? "project activated" : "project deactivated"} ref={divRef}>
+    <div className={isVisible ? "project activated" : "project deactivated"} ref={entireComponent}>
 
             <h2>{title}</h2>
             <h3>{dates.start} - {dates.end}</h3>
@@ -70,20 +98,26 @@ function Project({title,repositories,dates,technologies,illustration,websiteURL}
 
             <div className="illustration">
                 {illustration.hasOwnProperty("videoURL") ? //if we have a video URL, we display the video
-                    <iframe
-                        className="videoDemonstration"
-                        title={illustration.description}
-                        src={illustration.videoURL}
-                        allowFullScreen={true}
-                    ></iframe>
+                    <div className={isVideoClicked ? "videoDemonstrationBox fullVideo" : "videoDemonstrationBox"}>
+                        {!isVideoClicked ? <div className="clickDetection" onClick={handleClickVideo}></div> : null}
+                        {isVideoClicked ?    <div className="cancelCross">{'\u2a2f'}</div> : null}
+                        <iframe
+                            className={isVideoClicked ? "videoDemonstration fullVideo" : "videoDemonstration"}
+                            title={illustration.description}
+                            src={illustration.videoURL}
+                            allowFullScreen={true}
+                            allow="autoplay; encrypted-media"
+                            id="illustrationVideo"
+                        ></iframe>
+                    </div>
                     : null}
 
                 {illustration.hasOwnProperty("image") ? //if we have an image, we display it
                     <React.Fragment>
                         <div
-                            className={isIllustrationClicked ? "imageContainer fullImage":"imageContainer croppedImage"}
-                            onClick={handleClick} //increase the size of the box to display full image
-                            style={isIllustrationClicked ? {
+                            className={isImageClicked ? "imageContainer fullImage":"imageContainer croppedImage"}
+                            onClick={handleClickImage} //increase the size of the box to display full image
+                            style={isImageClicked ? {
                                 backgroundImage: `url(${illustration.image})`, //use a background because it doesn't increase the height
                                 height: document.getElementsByClassName("imageContainer").item(0).clientWidth*aspectRatio*1.01 //width of the container time the aspect ratio * 1% because of calculation errors
                             }:
