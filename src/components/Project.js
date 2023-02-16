@@ -16,15 +16,17 @@ function Project({title,repositories,dates,technologies,illustration,websiteURL,
         JavaScript: JsIcon,
         Sass: SassIcon
     }
+
+
+
+    //=====this part handle the appearance and disappearance of elements when it enters the screen ===
+
     const entireComponent = useRef();
     const [isVisible, setIsVisible] = useState(true);
     const [topComponent, setTopComponent]= useState(0)
     const [bottomComponent,setBottomComponent] = useState(0);
     const [componentHeight, setComponentHeight] = useState(0);
-    const [aspectRatio,setAspectRatio]=useState(0);
 
-
-    //=====this part handle the appearance and disappearance of elements when it enters the screen ===
     useEffect(() => { //add on mount and remove on dismount event listener on scroll
         window.addEventListener("scroll", listenToScroll);
         return () =>
@@ -55,12 +57,21 @@ function Project({title,repositories,dates,technologies,illustration,websiteURL,
         listenToScroll()
     },[componentHeight,listenToScroll,illustration.image])
 
+
+
+    //===This part handle the full or cropped display of the illustration image===
     const [isImageClicked, setIsImageClicked] = useState(false);
-    const [isVideoClicked, setIsVideoClicked] = useState(false);
+    const [aspectRatio,setAspectRatio]=useState(0);
 
     const handleClickImage = () => { //toggle isImageClicked variable
         setIsImageClicked(current => !current);
     };
+
+
+
+    //===This part handle the growing of the video demonstration, and the shrinking when click on the cross or outside the video
+
+    const [isVideoClicked, setIsVideoClicked] = useState(false);
 
     const handleClickVideo =useCallback (() => { //toggle isImageClicked variable
         setIsVideoClicked(current => !current);
@@ -87,8 +98,10 @@ function Project({title,repositories,dates,technologies,illustration,websiteURL,
             }
         }
     }, [isVideoClicked,index,handleClickVideo]);
-    return (
 
+
+
+    return (
     <div className={isVisible ? "project activated" : "project deactivated"} ref={entireComponent}>
 
             <h2>{title}</h2>
