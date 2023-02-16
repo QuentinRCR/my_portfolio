@@ -78,12 +78,20 @@ function Project({title,repositories,dates,technologies,illustration,websiteURL}
         setIsVideoClicked(current => !current);
     },[]);
 
+    //detect if a click was made outside VideoDemonstrationBox
+    // (the click on the iframe are not detected)
+    // this function also handle the cancel cross
+    const outsideVideoDemonstrationBoxClicked = useCallback ((e) => {
+        //the if prevent that this function is triggered when we click on the video to grow it
+        if(e.target.className !== "clickDetection") {
+            toggleVideoGrowth();
+        }
+    },[toggleVideoGrowth]);
+
     //Add event listener when isVideoClicked is true and remove it when its false
     useEffect(() => {
         //if the video is grown and centered, add an event listener of the whole document
         // to detect any click outside the video box
-        // (the click on the iframe are not detected)
-        // this even listener also handle the cancel cross
         if(isVideoClicked) {
             document.addEventListener('click', outsideVideoDemonstrationBoxClicked);
         }
@@ -91,14 +99,7 @@ function Project({title,repositories,dates,technologies,illustration,websiteURL}
             //remove it as some as not needed to avoid conflicts
             document.removeEventListener('click', outsideVideoDemonstrationBoxClicked);
         };
-
-        function outsideVideoDemonstrationBoxClicked(e){
-            //the if prevent that this function is triggered when we click on the video to grow it
-            if(e.target.className !== "clickDetection") {
-                toggleVideoGrowth();
-            }
-        }
-    }, [isVideoClicked,toggleVideoGrowth]);
+    }, [isVideoClicked,toggleVideoGrowth,outsideVideoDemonstrationBoxClicked]);
 
 
 
