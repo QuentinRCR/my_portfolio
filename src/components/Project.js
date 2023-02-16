@@ -8,7 +8,7 @@ import GithubIcon from "../images/GithubIcon.png"
 import SassIcon from "../images/SassIcon.png"
 
 
-function Project({title,repositories,dates,technologies,illustration,websiteURL,index}) {
+function Project({title,repositories,dates,technologies,illustration,websiteURL}) {
     const iconLibrary = {
         React: ReactIcon,
         Vue: VueIcon,
@@ -71,33 +71,34 @@ function Project({title,repositories,dates,technologies,illustration,websiteURL,
 
     //===This part handle the growing of the video demonstration, and the shrinking when click on the cross or outside the video
 
-    const [isVideoClicked, setIsVideoClicked] = useState(false);
+    const [isVideoClicked, setIsVideoClicked] = useState(false); //video center and grown when true
 
-    const handleClickVideo =useCallback (() => { //toggle isImageClicked variable
+    //add a class to VideoDemonstrationBox when set to true
+    const toggleVideoGrowth =useCallback (() => {
         setIsVideoClicked(current => !current);
-        console.log(" toggle video")
     },[]);
 
+    //Add event listener when isVideoClicked is true and remove it when its false
     useEffect(() => {
-        console.log(index+" useEffect triggered ")
+        //if the video is grown and centered, add an event listener of the whole document
+        // to detect any click outside the video box
+        // (the click on the iframe are not detected)
+        // this even listener also handle the cancel cross
         if(isVideoClicked) {
-            document.addEventListener('click', bodyClicked);
-            console.log(index+" add listener");
+            document.addEventListener('click', outsideVideoDemonstrationBoxClicked);
         }
         return () => {
-            document.removeEventListener('click', bodyClicked);
-            console.log(index+" remove listener");
+            //remove it as some as not needed to avoid conflicts
+            document.removeEventListener('click', outsideVideoDemonstrationBoxClicked);
         };
 
-        function bodyClicked(e){
+        function outsideVideoDemonstrationBoxClicked(e){
+            //the if prevent that this function is triggered when we click on the video to grow it
             if(e.target.className !== "clickDetection") {
-                if (isVideoClicked) {
-                    handleClickVideo();
-                    console.log(index + " body clicked");
-                }
+                toggleVideoGrowth();
             }
         }
-    }, [isVideoClicked,index,handleClickVideo]);
+    }, [isVideoClicked,toggleVideoGrowth]);
 
 
 
@@ -112,7 +113,7 @@ function Project({title,repositories,dates,technologies,illustration,websiteURL,
             <div className="illustration">
                 {illustration.hasOwnProperty("videoURL") ? //if we have a video URL, we display the video
                     <div className={isVideoClicked ? "videoDemonstrationBox fullVideo" : "videoDemonstrationBox"}>
-                        {!isVideoClicked ? <div className="clickDetection" onClick={handleClickVideo}></div> : null}
+                        {!isVideoClicked ? <div className="clickDetection" onClick={toggleVideoGrowth}></div> : null}
                         {isVideoClicked ?    <div className="cancelCross">{'\u2a2f'}</div> : null}
                         <iframe
                             className={isVideoClicked ? "videoDemonstration fullVideo" : "videoDemonstration"}
