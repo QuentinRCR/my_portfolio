@@ -10,11 +10,27 @@
     margin: 0 !important;
     grid-row: 1/span 10;
 
-    .fullVideo{
-      width: 90% !important;
+    .fullVideo { //when class added, display video at the center of the screen in a big format
+      //display: none;
+      position: fixed !important;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 80% !important;
+      aspect-ratio: 16/9;
+      z-index: 10;
     }
+
+    }
+
+    .clickDetection{ //this div cover the video. On onclick event is on it because it doesn't work if direct on the iframe
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      cursor: pointer;
+    }
+
   }
-}
 
 /* No less than 480px, no greater than 800px for the tablet format*/
 @media (min-width:480px) and (max-width:800px) {
@@ -89,57 +105,24 @@
     justify-content: center;
     width: 100%;
     margin-top: 20px; //for the mobile display
-    margin-bottom: 10px;
-
-    .fullVideo { //when class added, display video at the center of the screen in a big format
-      //display: none;
-      position: fixed !important;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      width: 96%;
-      aspect-ratio: 16/9;
-      z-index: 10;
-    }
+    margin-bottom: 20px;
 
     .videoDemonstrationBox{
       position: relative;
+      width: 100%;
+      text-align: center;
 
         .videoDemonstration {
-          //aspect-ratio: 16/9;
+          aspect-ratio: 16/9;
           align-self: center;
           border-radius: 10px;
           width: 100%;
-          aspect-ratio: 16/9;
+          //aspect-ratio: 16/9;
           z-index: 1;
-        }
 
-        .cancelCross{
-          position: absolute;
-          top: 5%;
-          right: 8%;
-          z-index: 15;
-          cursor: pointer;
-          font-size: 300%;
-          /*color: black;
-          text-shadow: -1px 1px 0 #fff,
-          1px 1px 0 #fff,
-          1px -1px 0 #fff,
-          -1px -1px 0 #fff;*/
-          -webkit-text-stroke-width: 2px;
-          -webkit-text-stroke-color: white;
-
-          &:hover{
-            -webkit-text-stroke-color: black;
-            color: white;
+          #illustrationVideo{
+            width: 100%;
           }
-        }
-
-        .clickDetection{ //this div cover the video. On onclick event is on it because it doesn't work if direct on the iframe
-          position: absolute;
-          height: 100%;
-          width: 100%;
-          cursor: pointer;
         }
       }
 

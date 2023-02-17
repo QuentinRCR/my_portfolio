@@ -115,7 +115,6 @@ function Project({title,repositories,dates,technologies,illustration,websiteURL}
                 {illustration.hasOwnProperty("videoURL") ? //if we have a video URL, we display the video
                     <div className={isVideoClicked ? "videoDemonstrationBox fullVideo" : "videoDemonstrationBox"}>
                         {!isVideoClicked ? <div className="clickDetection" onClick={toggleVideoGrowth}></div> : null}
-                        {isVideoClicked ?    <div className="cancelCross">{'\u2a2f'}</div> : null}
                         <iframe
                             className={isVideoClicked ? "videoDemonstration fullVideo" : "videoDemonstration"}
                             title={illustration.description}
