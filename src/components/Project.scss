@@ -1,7 +1,7 @@
 /*For desktop format*/
 @media screen and (min-width: 800px) {
   .project{
-
+    display: grid;
     grid-template-columns: 35% 1fr;
     column-gap: 40px;
   }
@@ -9,6 +9,10 @@
   .illustration{
     margin: 0 !important;
     grid-row: 1/span 10;
+
+    .fullVideo{
+      width: 90% !important;
+    }
   }
 }
 
@@ -68,7 +72,6 @@
 
 .project{
   border-radius: 10px;
-  display: grid;
   width: 80%;
 
   h2 {
@@ -86,6 +89,7 @@
     justify-content: center;
     width: 100%;
     margin-top: 20px; //for the mobile display
+    margin-bottom: 10px;
 
     .fullVideo { //when class added, display video at the center of the screen in a big format
       //display: none;
@@ -93,7 +97,7 @@
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      width: 65%;
+      width: 96%;
       aspect-ratio: 16/9;
       z-index: 10;
     }
@@ -113,7 +117,7 @@
         .cancelCross{
           position: absolute;
           top: 5%;
-          right: 5%;
+          right: 8%;
           z-index: 15;
           cursor: pointer;
           font-size: 300%;
