@@ -147,6 +147,12 @@ function Project({title,repositories,dates,technologies,illustration,websiteURL}
 
 
 
+        {websiteURL ? /*display the element if technologies in not null*/
+            <div className="accessWebsite">
+                <a className="prettyButton" href={websiteURL} target="_blank" rel="noreferrer">Access the website</a>
+            </div>
+            : null }
+
 
             {technologies ? /*display the element if technologies in not null*/
                 <div className="technologiesBox">
@@ -168,7 +174,6 @@ function Project({title,repositories,dates,technologies,illustration,websiteURL}
             : null }
 
 
-
             {Object.keys(repositories).length>0 ? /*display the element if technologies in not null*/
                 <div className="repositoriesBox">
                     <p className="repoTitle">Repositories</p>
@@ -184,14 +189,6 @@ function Project({title,repositories,dates,technologies,illustration,websiteURL}
                     </div>
                 </div>
                 : null }
-
-
-
-            {websiteURL ? /*display the element if technologies in not null*/
-                <div className="accessWebsite">
-                    <a className="prettyButton" href={websiteURL} target="_blank" rel="noreferrer">Access the website</a>
-                </div>
-                    : null }
 
         </div>
     );

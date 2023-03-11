@@ -13,7 +13,7 @@ function App() {
             },
             dates: {
                 start: "February 2023",
-                end: "Today"
+                end: "March 2023"
             },
             technologies: {
                 frontend:"React",
@@ -32,7 +32,7 @@ function App() {
             },
             dates: {
                 start: "January 2023",
-                end: "Today"
+                end: "February 2023"
             },
             technologies: {
                 backend:"SpringBoot",
@@ -69,6 +69,7 @@ function App() {
         {
             title: "Web interface to display the data of the ecological situation of Saint-Etienne",
             repositoriesURL: {
+                frontend: "https://github.com/ctc42/donut",
             },
             dates: {
                 start: "September 2021",
