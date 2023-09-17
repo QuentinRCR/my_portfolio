@@ -3,9 +3,47 @@ import Project from './components/Project'
 import React from "react";
 import BusSchedulesDemonstation from './images/bus_schedules_demonstation.png'
 import PortfolioImage from './images/portfolio.png'
+import MultiAgentSimulation from './images/multi_agent_simulation.png'
+import ReactIcon from "./images/React-icon.png"
 
 function App() {
     let projectInformation = [
+        {
+            title: "Migration of an Excel application towards a web application",
+            repositoriesURL: null,
+            dates: {
+                start: "January 2023",
+                end: "July 2023"
+            },
+            technologies: {
+                migration: "Python",
+                frontend:"React",
+                language: "Typescript",
+                css: "Sass",
+                backend: "SpringBoot"
+            },
+            illustration: {
+                image: ReactIcon,
+                description: "Junior con"
+            },
+        }
+        ,{
+            title: "Warehouse simulation with autonomous agents for parcel management",
+            repositoriesURL: {
+                Simulation: "https://github.com/AI-Challenge-2023/IA_Practice"
+            },
+            dates: {
+                start: "February 2023",
+                end: "May 2023"
+            },
+            technologies: {
+                simulation: "Java"
+            },
+            illustration: {
+                image: MultiAgentSimulation,
+                description: "Multi agent simulation"
+            },
+        },
         {
             title: "This web portfolio",
             repositoriesURL: {

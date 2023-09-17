@@ -6,6 +6,9 @@ import SpringBootIcon from "../images/SpringBoot-icon.png"
 import VueIcon from "../images/Vue-icon.png"
 import GithubIcon from "../images/GithubIcon.png"
 import SassIcon from "../images/SassIcon.png"
+import JavaIcon from "../images/java_icon.png"
+import TypescryptIcon from "../images/typescript_icon.png"
+import PythonIcon from "../images/python_icon.png"
 
 
 function Project({title,repositories,dates,technologies,illustration,websiteURL}) {
@@ -14,7 +17,10 @@ function Project({title,repositories,dates,technologies,illustration,websiteURL}
         Vue: VueIcon,
         SpringBoot: SpringBootIcon,
         JavaScript: JsIcon,
-        Sass: SassIcon
+        Sass: SassIcon,
+        Typescript: TypescryptIcon,
+        Java: JavaIcon,
+        Python: PythonIcon
     }
 
 
@@ -174,7 +180,7 @@ function Project({title,repositories,dates,technologies,illustration,websiteURL}
             : null }
 
 
-            {Object.keys(repositories).length>0 ? /*display the element if technologies in not null*/
+            {repositories!= null && Object.keys(repositories).length>0 ? /*display the element if technologies in not null*/
                 <div className="repositoriesBox">
                     <p className="repoTitle">Repositories</p>
                     <div className="repositoriesDisplay">
