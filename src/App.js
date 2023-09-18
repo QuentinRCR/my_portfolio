@@ -4,12 +4,12 @@ import React from "react";
 import BusSchedulesDemonstation from './images/bus_schedules_demonstation.png'
 import PortfolioImage from './images/portfolio.png'
 import MultiAgentSimulation from './images/multi_agent_simulation.png'
-import ReactIcon from "./images/React-icon.png"
+import MigrationImage from "./images/migration-login.png"
 
 function App() {
     let projectInformation = [
         {
-            title: "Migration of an Excel application towards a web application",
+            title: "Migration of an Excel application towards a web application for an industrial association",
             repositoriesURL: null,
             dates: {
                 start: "January 2023",
@@ -23,7 +23,7 @@ function App() {
                 backend: "SpringBoot"
             },
             illustration: {
-                image: ReactIcon,
+                image: MigrationImage,
                 description: "Junior con"
             },
         }
@@ -31,6 +31,9 @@ function App() {
             title: "Warehouse simulation with autonomous agents for parcel management",
             repositoriesURL: {
                 Simulation: "https://github.com/AI-Challenge-2023/IA_Practice"
+            },
+            documents: {
+                Report: "https://drive.google.com/file/d/169DmtHZJWXHCrx7117IPLwi2K15jHyDJ/view?usp=sharing"
             },
             dates: {
                 start: "February 2023",
@@ -139,6 +142,7 @@ function App() {
                         technologies={project.technologies}
                         illustration={project.illustration}
                         websiteURL={project.websiteURL}
+                        documents = {project.documents}
                         className="project"
                     ></Project>
                     <hr/>

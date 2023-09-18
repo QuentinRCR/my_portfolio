@@ -9,9 +9,10 @@ import SassIcon from "../images/SassIcon.png"
 import JavaIcon from "../images/java_icon.png"
 import TypescryptIcon from "../images/typescript_icon.png"
 import PythonIcon from "../images/python_icon.png"
+import DocumentIcon from "../images/documentIcon.png"
 
 
-function Project({title,repositories,dates,technologies,illustration,websiteURL}) {
+function Project({title,repositories,dates,technologies,illustration,websiteURL,documents}) {
     const iconLibrary = {
         React: ReactIcon,
         Vue: VueIcon,
@@ -179,6 +180,22 @@ function Project({title,repositories,dates,technologies,illustration,websiteURL}
                 </div>
             : null }
 
+
+            {documents!= null && Object.keys(documents).length>0 ? /*display the element if technologies in not null*/
+                <div className="repositoriesBox">
+                    <p className="repoTitle">Documents</p>
+                    <div className="repositoriesDisplay">
+                        {Object.keys(documents)?.map((key,index) => /*For each item, display the link to the repository*/
+                            <div key={index} className="oneRepositoryBox">
+                                <a href={documents[key]} target="_blank" rel="noreferrer">
+                                    <img src={DocumentIcon} alt="Github Icon"/>
+                                    <p className="repoType">{key.charAt(0).toUpperCase() + key.slice(1)}</p>
+                                </a>
+                            </div>
+                        )}
+                    </div>
+                </div>
+                : null }
 
             {repositories!= null && Object.keys(repositories).length>0 ? /*display the element if technologies in not null*/
                 <div className="repositoriesBox">
