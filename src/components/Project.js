@@ -10,6 +10,7 @@ import JavaIcon from "../images/java_icon.png"
 import TypescryptIcon from "../images/typescript_icon.png"
 import PythonIcon from "../images/python_icon.png"
 import DocumentIcon from "../images/documentIcon.png"
+import ROSIcon from '../images/Ros_logo.svg.png'
 
 
 function Project({title,repositories,dates,technologies,illustration,websiteURL,documents}) {
@@ -21,7 +22,8 @@ function Project({title,repositories,dates,technologies,illustration,websiteURL,
         Sass: SassIcon,
         Typescript: TypescryptIcon,
         Java: JavaIcon,
-        Python: PythonIcon
+        Python: PythonIcon,
+        ROS: ROSIcon
     }
 
 

@@ -5,9 +5,27 @@ import BusSchedulesDemonstation from './images/bus_schedules_demonstation.png'
 import PortfolioImage from './images/portfolio.png'
 import MultiAgentSimulation from './images/multi_agent_simulation.png'
 import MigrationImage from "./images/migration-login.png"
+import TurtleBotImage from "./images/turtlebo.jpg"
 
 function App() {
     let projectInformation = [
+        {
+            title: "Management of a fleet of Turtlebots in a model factory in order to produce items. Involves many different IAs including audio synthesizing, vocal command recognition, multi-agent management, path finding algorithm, planning algorithm and image processing",
+            repositoriesURL: null,
+            dates: {
+                start: "September 2023",
+                end: "Today"
+            },
+            technologies: {
+                other: "Python",
+                planning:"Java",
+                OS: "ROS"
+            },
+            illustration: {
+                image: TurtleBotImage,
+                description: "Turtlebot image"
+            },
+        },
         {
             title: "Migration of an Excel application towards a web application for an industrial association",
             repositoriesURL: null,
