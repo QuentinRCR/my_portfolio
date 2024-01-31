@@ -11,9 +11,10 @@ import TypescryptIcon from "../images/typescript_icon.png"
 import PythonIcon from "../images/python_icon.png"
 import DocumentIcon from "../images/documentIcon.png"
 import ROSIcon from '../images/Ros_logo.svg.png'
+import MultiAgentIcon from '../images/multi-agentIcon.png'
 
 
-function Project({title,repositories,dates,technologies,illustration,websiteURL,documents}) {
+function Project({title,subtitle,repositories,dates,technologies,illustration,websiteURL,documents}) {
     const iconLibrary = {
         React: ReactIcon,
         Vue: VueIcon,
@@ -23,7 +24,8 @@ function Project({title,repositories,dates,technologies,illustration,websiteURL,
         Typescript: TypescryptIcon,
         Java: JavaIcon,
         Python: PythonIcon,
-        ROS: ROSIcon
+        ROS: ROSIcon,
+        Jacamo: MultiAgentIcon
     }
 
 
@@ -116,6 +118,7 @@ function Project({title,repositories,dates,technologies,illustration,websiteURL,
     <div className={isVisible ? "project activated" : "project deactivated"} ref={entireComponent}>
 
             <h2>{title}</h2>
+            <h4>{subtitle}</h4>
             <h3>{dates.start} - {dates.end}</h3>
 
 

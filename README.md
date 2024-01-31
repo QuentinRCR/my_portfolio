@@ -3,7 +3,7 @@
 
 ## Description
 ### Goal
-The goal of this project is to create a web portfolio describing the compter science projects made partially or entirely by REY Quentin. 
+The goal of this project is to create a web portfolio describing the computer science projects made partially or entirely by REY Quentin. 
 
 ### How to use it?
 This is a React application. To launch it you need to have npm.Then go on the root directory and run
