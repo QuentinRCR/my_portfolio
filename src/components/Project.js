@@ -12,6 +12,7 @@ import PythonIcon from "../images/python_icon.png"
 import DocumentIcon from "../images/documentIcon.png"
 import ROSIcon from '../images/Ros_logo.svg.png'
 import MultiAgentIcon from '../images/multi-agentIcon.png'
+import TensorflowIcon from '../images/tensorflow-icon.png'
 
 
 function Project({title,subtitle,repositories,dates,technologies,illustration,websiteURL,documents}) {
@@ -25,7 +26,8 @@ function Project({title,subtitle,repositories,dates,technologies,illustration,we
         Java: JavaIcon,
         Python: PythonIcon,
         ROS: ROSIcon,
-        Jacamo: MultiAgentIcon
+        Jacamo: MultiAgentIcon,
+        Tensorflow: TensorflowIcon
     }
 
 

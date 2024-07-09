@@ -5,9 +5,32 @@ import BusSchedulesDemonstation from './images/bus_schedules_demonstation.png'
 import PortfolioImage from './images/portfolio.png'
 import MultiAgentSimulation from './images/multi_agent_simulation.png'
 import MigrationImage from "./images/migration-login.png"
+import ResearchProjectIllustration from "./images/research_project_illustration.png"
 
 function App() {
     let projectInformation = [
+        {
+            title: "SmartGloveXfer: Detection and transcription of movements with Transfer learning",
+            subtitle: "Enhancing the accuracy of air-drawn letter classification with transfer learning techniques on a small dataset",
+            repositoriesURL: {
+                "Preprocessing and classifier": "https://github.com/QuentinRCR/Detection-and-transcription-of-movements-with-Transfer-learning"
+            },
+            dates: {
+                start: "February 2023",
+                end: "April 2023"
+            },
+            technologies: {
+                "Preprocessing": "Python",
+                "Classifiers": "Tensorflow"
+            },
+            documents: {
+                "Scientific paper": "https://drive.google.com/file/d/1QT8ldp5LNaZ6PdTBJYoImtKJp7IY2Wib/view?usp=sharing"
+            },
+            illustration: {
+                image: ResearchProjectIllustration,
+                description: "Presentation appointment scheduler"
+            },
+        },
         {
             title: "Management of a Turtlebot  that produces items in a model factory",
             subtitle: "The objects and the workstations are placed on the map using signs perceived by a camera. The robot can be controlled using audio commands.",
