@@ -1,14 +1,13 @@
 {
   "files": {
     "main.css": "/my_portfolio/static/css/main.2263499d.css",
-    "main.js": "/my_portfolio/static/js/main.8383f78b.js",
+    "main.js": "/my_portfolio/static/js/main.d05b6a35.js",
     "static/js/787.128fc6e9.chunk.js": "/my_portfolio/static/js/787.128fc6e9.chunk.js",
     "static/media/research_project_illustration.png": "/my_portfolio/static/media/research_project_illustration.c9fad81a057125595bb5.png",
     "static/media/portfolio.png": "/my_portfolio/static/media/portfolio.d016e95b7416bc90584e.png",
     "static/media/python_icon.png": "/my_portfolio/static/media/python_icon.1eaaad356f1e20a2540f.png",
     "static/media/Ros_logo.svg.png": "/my_portfolio/static/media/Ros_logo.svg.71c05bbd072abe6a3fef.png",
     "static/media/SassIcon.png": "/my_portfolio/static/media/SassIcon.7cdbf6b5889c42b3e490.png",
-    "static/media/bus_schedules_demonstation.png": "/my_portfolio/static/media/bus_schedules_demonstation.f0a04f1ad301ecc360b6.png",
     "static/media/multi_agent_simulation.png": "/my_portfolio/static/media/multi_agent_simulation.3d276cc9a90ef2a33122.png",
     "static/media/multi-agentIcon.png": "/my_portfolio/static/media/multi-agentIcon.f2a2216d82fd87d059ef.png",
     "static/media/React-icon.png": "/my_portfolio/static/media/React-icon.09df55c21bdb35711dd0.png",
@@ -21,11 +20,11 @@
     "static/media/java_icon.png": "/my_portfolio/static/media/java_icon.6c64373d3b7415758078.png",
     "index.html": "/my_portfolio/index.html",
     "main.2263499d.css.map": "/my_portfolio/static/css/main.2263499d.css.map",
-    "main.8383f78b.js.map": "/my_portfolio/static/js/main.8383f78b.js.map",
+    "main.d05b6a35.js.map": "/my_portfolio/static/js/main.d05b6a35.js.map",
     "787.128fc6e9.chunk.js.map": "/my_portfolio/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2263499d.css",
-    "static/js/main.8383f78b.js"
+    "static/js/main.d05b6a35.js"
   ]
 }
