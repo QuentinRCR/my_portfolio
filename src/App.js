@@ -1,7 +1,6 @@
 import './App.scss';
 import Project from './components/Project'
 import React from "react";
-import BusSchedulesDemonstation from './images/bus_schedules_demonstation.png'
 import PortfolioImage from './images/portfolio.png'
 import MultiAgentSimulation from './images/multi_agent_simulation.png'
 import MigrationImage from "./images/migration-login.png"
@@ -32,8 +31,8 @@ function App() {
             },
         },
         {
-            title: "Management of a Turtlebot  that produces items in a model factory",
-            subtitle: "The objects and the workstations are placed on the map using signs perceived by a camera. The robot can be controlled using audio commands.",
+            title: "Development, implementation and coordination of AI systems in a robot",
+            subtitle: "This autonomous robot evolves in a factory simulation where it builds objects. Thanks to its vision and sensors, it locates materials, avoids obstacles, obeys signs (e.g. red lights) and responds to verbal commands.",
             repositoriesURL: {
                 "Project and report": "https://github.com/QuentinRCR/Integrating-and-Engineering-Intelligent-Systems/tree/main"
             },
@@ -107,27 +106,6 @@ function App() {
                 image: PortfolioImage,
                 description: "Image of a portfolio"
             },
-        },
-        {
-            title: "Personal project - Consultation of bus schedules",
-            repositoriesURL: {
-                backend: "https://github.com/QuentinRCR/backend-shuttle-time-display",
-                frontend: "https://github.com/QuentinRCR/shuttle-time-display"
-            },
-            dates: {
-                start: "January 2023",
-                end: "February 2023"
-            },
-            technologies: {
-                backend:"SpringBoot",
-                frontend:"React",
-                css: "Sass"
-            },
-            illustration: {
-                image: BusSchedulesDemonstation,
-                description: "Demonstration of a display of bus schedules"
-            },
-            websiteURL: null
         },
         {
             title: "Appointment scheduler for the school’s psychologist",
