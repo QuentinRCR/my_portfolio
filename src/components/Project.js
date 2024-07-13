@@ -163,14 +163,14 @@ function Project({title,subtitle,repositories,dates,technologies,illustration,we
 
         {websiteURL ? /*display the element if technologies in not null*/
             <div className="accessWebsite">
-                <a className="prettyButton" href={websiteURL} target="_blank" rel="noreferrer">Access the website</a>
+                <a className="prettyButton" href={websiteURL} target="_blank" rel="noreferrer">Accéder au site</a>
             </div>
             : null }
 
 
             {technologies ? /*display the element if technologies in not null*/
                 <div className="technologiesBox">
-                    <p >Technologies used</p>
+                    <p >Technologies utilisées</p>
                     <div className="technologieDisplay">
                         {Object.keys(technologies)?.map((key,index) => /*For each item, display the name
                          of the key with uppercase on the first character and the name of the techno as well as the corresponding icon*/
@@ -206,7 +206,7 @@ function Project({title,subtitle,repositories,dates,technologies,illustration,we
 
             {repositories!= null && Object.keys(repositories).length>0 ? /*display the element if technologies in not null*/
                 <div className="repositoriesBox">
-                    <p className="repoTitle">Repositories</p>
+                    <p className="repoTitle">Dépôts</p>
                     <div className="repositoriesDisplay">
                         {Object.keys(repositories)?.map((key,index) => /*For each item, display the link to the repository*/
                             <div key={index} className="oneRepositoryBox">
