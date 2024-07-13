@@ -1,5 +1,6 @@
 import './App.scss';
 import Project from './components/Project'
+import OtherProjects from './components/OtherProjects';
 import React from "react";
 import PortfolioImage from './images/portfolio.png'
 import MultiAgentSimulation from './images/multi_agent_simulation.png'
@@ -170,6 +171,7 @@ function App() {
                     <hr/>
                 </React.Fragment>
             )}
+            <OtherProjects></OtherProjects>
         </main>
         <footer> {/*used to avoid bug in the mobile version*/}
         </footer>
