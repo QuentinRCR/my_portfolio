@@ -24,7 +24,8 @@ function App() {
                 "Classifieurs": "Tensorflow"
             },
             documents: {
-                "Article scientifique": "https://drive.google.com/file/d/1QT8ldp5LNaZ6PdTBJYoImtKJp7IY2Wib/view?usp=sharing"
+                "Article scientifique": "https://drive.google.com/file/d/1l521aLKmOVVaeZ6-j6hoz1LLstrSGu5H/view?usp=drive_link",
+                "Poster":"https://drive.google.com/file/d/1GsFCxmJakSaGURMHwMg0UtpSTPWb6E5B/view?usp=sharing"
             },
             illustration: {
                 image: ResearchProjectIllustration,
