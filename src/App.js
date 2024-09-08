@@ -16,8 +16,8 @@ function App() {
                 "Prétraitement et classifieurs": "https://github.com/QuentinRCR/Detection-and-transcription-of-movements-with-Transfer-learning"
             },
             dates: {
-                start: "Février 2023",
-                end: "Avril 2023"
+                start: "Février 2024",
+                end: "Avril 2024"
             },
             technologies: {
                 "Prétraitement": "Python",
@@ -40,7 +40,7 @@ function App() {
             },
             dates: {
                 start: "Septembre 2023",
-                end: "Janvier 2023"
+                end: "Janvier 2024"
             },
             technologies: {
                 "Systèmes intelligents": "Python",
