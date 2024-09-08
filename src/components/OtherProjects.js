@@ -14,10 +14,6 @@ function OtherProjects() {
             "description": "Utilisation d'EC2, de Lambda et de S3 pour uploader automatiquement des documents sur AWS, et créer un bilan de tous les documents créés pendant la journée."
         },
         {
-            "name": "Traitement d'image: Détection automatique de cellules présentes sur une photo",
-            "description": "Ce type de technologie est notamment utile pour assister les médecins à connaître la concentration de certaines cellules dans le sang."
-        },
-        {
             "name": "Création d'un petit objet connecté répondant aux stimuli",
             "description": "Création d'un petit \"robot\" réagissant à la lumière, au son, à l'humidité à l'aide d'un microcontrôleur ESP32 WROOM. Utilisation de l'écran pour pouvoir jouer à un jeu de morpion."
         },

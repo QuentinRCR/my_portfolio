@@ -6,6 +6,7 @@ import PortfolioImage from './images/portfolio.png'
 import MultiAgentSimulation from './images/multi_agent_simulation.png'
 import MigrationImage from "./images/migration-login.png"
 import ResearchProjectIllustration from "./images/research_project_illustration.png"
+import ImageProcessingIllustration from "./images/image_processing_comparison.png"
 
 function App() {
     let projectInformation = [
@@ -90,6 +91,27 @@ function App() {
                 image: MultiAgentSimulation,
                 description: "Capture d'écran de la simulation multi-agent"
             },
+        },
+        {
+            title: "Détection automatique d’agrégats dans une image",
+            repositoriesURL: {
+                code: "https://github.com/QuentinRCR/Detection_automatique_agr-gats"
+            },
+            subtitle: "Segmentation et comptage d'agrégats sur une image dans le but de déterminer leur nombre, leur surface et leur périmètre. Cette technologie est particulièrement utile pour aider les médecins à évaluer la concentration de certaines cellules dans le sang.",
+            dates: {
+                start: "Février 2023",
+                end: "Mars 2023"
+            },
+            technologies: {
+                "Traitement d'image":"Python"
+            },
+            illustration: {
+                image: ImageProcessingIllustration,
+                description: "Comparaison avant après le traitement d’image"
+            },
+            documents: {
+                "Rapport": "https://github.com/QuentinRCR/Detection_automatique_agr-gats/blob/master/Rapport.adoc",
+            }
         },
         {
             title: "Ce Portfolio",
