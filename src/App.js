@@ -37,7 +37,10 @@ function App() {
             title: "Développement, implémentation et coordination de systèmes d’IA dans un robot",
             subtitle: "Ce robot autonome évolue dans une simulation d'usine où il construit des objets. Grâce à sa vision et ses capteurs, il repère les matériaux, évite les obstacles, respecte les panneaux (ex : feux rouges) et répond aux ordres oraux.",
             repositoriesURL: {
-                "Projet et rapport": "https://github.com/QuentinRCR/Integrating-and-Engineering-Intelligent-Systems/tree/main"
+                "Projet": "https://github.com/QuentinRCR/Integrating-and-Engineering-Intelligent-Systems/tree/main"
+            },
+            documents: {
+                "Rapport": "https://github.com/QuentinRCR/Integrating-and-Engineering-Intelligent-Systems/blob/main/Report.md",
             },
             dates: {
                 start: "Septembre 2023",
